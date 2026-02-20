@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Naldi Carrión Puelles",
-  title: "Jefa de R&D Labs · Ingeniera · Investigadora",
+  title: "Head of R&D Labs · Engineer · Researcher",
   description:
-    "Ingeniera Civil y Sanitaria con +20 años liderando innovación tecnológica, fabricación digital y proyectos de impacto social. Candidata a PhD, docente internacional y co-autora de 4 patentes.",
+    "Civil & Sanitary Engineer with 20+ years leading technology innovation, digital fabrication, and social impact projects. PhD candidate, international lecturer, and co-author of 4 patents.",
 
   // 2-color system: deep teal (brand) + vibrant green (CTAs)
   accentColor: "#0e7490",
@@ -10,14 +10,14 @@ export const siteConfig = {
 
   // Hero stats
   stats: [
-    { value: "20+", label: "Años de experiencia" },
-    { value: "4", label: "Patentes co-autora" },
-    { value: "7", label: "Publicaciones académicas" },
+    { value: "20+", label: "Years of experience" },
+    { value: "4", label: "Patents co-authored" },
+    { value: "7", label: "Academic publications" },
   ],
 
   // Hero tagline
   tagline:
-    "Conecto tecnología, investigación y comunidades para crear innovación social medible.",
+    "I connect technology, research, and communities to create measurable social innovation.",
 
   social: {
     email: "naldicarrionpuelles@gmail.com",
@@ -26,123 +26,123 @@ export const siteConfig = {
   },
 
   aboutMe:
-    "Ingeniera Civil y Sanitaria, Magíster en Project Management por la University of Sydney y en Investigación en Ciencias de la Administración por ESAN, candidata a PhD en LaSalle Barcelona. Lidero los laboratorios de I+D en Universidad ESAN, donde impulso la experimentación, investigación y emprendimiento a través de fabricación digital. Co-fundadora de la Red Latinoamericana de Innovación Frugal (RELIF). Ex Presidenta Nacional de JCI Perú. Certificada PMP, PMO-CP y FabAcademy. Mi trayectoria abarca desde supervisión de obras de infraestructura sanitaria hasta gobernanza de innovación en el sector minero, con un hilo conductor: usar la tecnología para generar impacto social real.",
+    "Civil & Sanitary Engineer with a Master's in Project Management from the University of Sydney and a Master's in Administrative Science Research from ESAN, currently a PhD candidate at LaSalle Barcelona. I lead the R&D Labs at Universidad ESAN, driving experimentation, research, and entrepreneurship through digital fabrication. Co-founder of the Latin American Frugal Innovation Network (RELIF). Former National President of JCI Peru. PMP, PMO-CP, and FabAcademy certified. My career spans from sanitary infrastructure supervision to innovation governance in the mining sector — united by one thread: leveraging technology to generate real social impact.",
 
   skills: [
-    "Gestión de Proyectos (PMP)",
-    "Innovación Tecnológica",
-    "Fabricación Digital",
-    "Transferencia Tecnológica",
-    "Innovación Abierta",
+    "Project Management (PMP)",
+    "Technology Innovation",
+    "Digital Fabrication",
+    "Technology Transfer",
+    "Open Innovation",
     "Design Thinking",
-    "Prototipado Rápido",
-    "Gobernanza de Innovación",
-    "Gestión de I+D",
-    "Propiedad Intelectual",
-    "Planificación Territorial",
-    "Cambio Climático",
+    "Rapid Prototyping",
+    "Innovation Governance",
+    "R&D Management",
+    "Intellectual Property",
+    "Territorial Planning",
+    "Climate Change",
     "Power BI",
     "AutoCAD / BIM",
   ],
 
   projects: [
     {
-      name: "Laboratorios de I+D — ESAN",
+      name: "R&D Laboratories — ESAN",
       description:
-        "Creación e implementación de 3 laboratorios de investigación y desarrollo, con gestión de propiedad intelectual que produjo 4 patentes y reconocimientos nacionales e internacionales.",
+        "Creation and implementation of 3 research & development labs, with intellectual property management yielding 4 patents and national & international recognition.",
       link: "",
-      skills: ["I+D", "Patentes", "Gobernanza"],
+      skills: ["R&D", "Patents", "Governance"],
     },
     {
       name: "FabAcademy 2024",
       description:
-        "Diploma en Principles and Applications of Digital Fabrication. 19 semanas de proyectos: CAD, CNC, electrónica, 3D printing, IoT. Proyecto final: Motorized Hidden Pop-Up Shelf.",
+        "Diploma in Principles and Applications of Digital Fabrication. 19 weeks of hands-on projects: CAD, CNC, electronics, 3D printing, IoT. Final project: Motorized Hidden Pop-Up Shelf.",
       link: "https://fabacademy.org/2024/labs/esan/students/naldi-carrion/",
-      skills: ["Fabricación Digital", "Electrónica", "CNC", "3D Printing"],
+      skills: ["Digital Fabrication", "Electronics", "CNC", "3D Printing"],
     },
     {
-      name: "Inclusión con Fabricación Digital",
+      name: "Inclusion through Digital Fabrication",
       description:
-        "Desarrollo colaborativo de herramientas de aprendizaje de química para estudiantes con discapacidad visual, utilizando tecnologías de fabricación digital. Publicado en Fab 16.",
+        "Collaborative development of chemistry learning tools for visually impaired students using digital fabrication technologies. Published at Fab 16.",
       link: "",
-      skills: ["Inclusión", "FabLab", "Educación"],
+      skills: ["Inclusion", "FabLab", "Education"],
     },
     {
-      name: "SANIPUCP — Ideas Audaces 2016",
+      name: "SANIPUCP — Bold Ideas 2016",
       description:
-        "Coordinación técnica del proyecto de innovación inclusiva: sistema de gestión para producción de abono líquido mediante sanitarios portátiles secos. Ganador del fondo gubernamental concursable.",
+        "Technical coordination of an inclusive innovation project: management system for liquid fertilizer production through dry portable toilets. Winner of a government competitive fund.",
       link: "",
-      skills: ["Innovación Social", "Saneamiento", "I+D"],
+      skills: ["Social Innovation", "Sanitation", "R&D"],
     },
     {
-      name: "Red Latinoamericana de Innovación Frugal (RELIF)",
+      name: "Latin American Frugal Innovation Network (RELIF)",
       description:
-        "Co-fundadora de la red que conecta innovadores de América Latina para desarrollar soluciones accesibles y sostenibles con recursos limitados.",
+        "Co-founder of the network connecting innovators across Latin America to develop accessible and sustainable solutions with limited resources.",
       link: "",
-      skills: ["Innovación Frugal", "Liderazgo", "Redes"],
+      skills: ["Frugal Innovation", "Leadership", "Networks"],
     },
     {
-      name: "Robótica Remota de Bajo Costo",
+      name: "Low-Cost Remote Robotics Lab",
       description:
-        "Laboratorio remoto de bajo costo para aprendizaje de robótica durante contexto COVID. Publicado en IEEE ICET 2022, Beijing.",
+        "Low-cost remote laboratory for undergraduate robotics learning during COVID. Published at IEEE ICET 2022, Beijing.",
       link: "",
-      skills: ["Robótica", "Educación", "IEEE"],
+      skills: ["Robotics", "Education", "IEEE"],
     },
   ],
 
   experience: [
     {
       company: "Universidad ESAN",
-      title: "Jefa de Research & Development Labs",
-      dateRange: "2024 - Presente",
+      title: "Head of Research & Development Labs",
+      dateRange: "2024 - Present",
       bullets: [
-        "Creación del área y gestión de portafolio de proyectos de innovación tecnológica desde conceptualización hasta piloto",
-        "Implementación de 3 laboratorios de I+D con gestión de propiedad intelectual (4 patentes)",
-        "Coordinación con centros de investigación, empresas tecnológicas y redes internacionales",
+        "Created and managed the technology innovation project portfolio from conceptualization to pilot implementation",
+        "Implemented 3 R&D laboratories with intellectual property management (4 patents)",
+        "Coordinated with research centers, tech companies, and international networks",
       ],
     },
     {
       company: "Agualimpia",
-      title: "Miembro de Directorio",
-      dateRange: "2021 - Presente",
+      title: "Board Member",
+      dateRange: "2021 - Present",
       bullets: [
-        "Gobierno corporativo y supervisión de proyectos de agua y saneamiento financiados por sector privado",
+        "Corporate governance and oversight of water & sanitation projects funded by the private sector",
       ],
     },
     {
-      company: "Docencia Internacional",
-      title: "Profesora Universitaria e Invitada",
-      dateRange: "2018 - Presente",
+      company: "International Teaching",
+      title: "University Lecturer & Visiting Professor",
+      dateRange: "2018 - Present",
       bullets: [
-        "ESAN, U. de Lima, UPC, U. Javeriana de Colombia, Nottingham Trent University, SUNASS",
-        "Cursos: innovación, design thinking, sostenibilidad, prototipado, gestión de proyectos, cambio climático",
+        "ESAN, U. de Lima, UPC, U. Javeriana (Colombia), Nottingham Trent University, SUNASS",
+        "Courses: innovation, design thinking, sustainability, prototyping, project management, climate change",
       ],
     },
     {
-      company: "PNSR — Ministerio de Vivienda",
-      title: "Asesora Técnica",
+      company: "PNSR — Ministry of Housing",
+      title: "Technical Advisor",
       dateRange: "Feb - Sep 2017",
       bullets: [
-        "Elaboración de norma nacional para transferencias financieras y programación multianual",
-        "Implementación de Centros de Atención al Ciudadano en 24 regiones del Perú",
+        "Developed the national standard for financial transfers and multi-year project programming",
+        "Implemented Citizen Service Centers across 24 regions of Peru",
       ],
     },
     {
       company: "Universidad ESAN — Fab Lab",
-      title: "Coordinadora General CIT",
+      title: "General Coordinator, Technology Innovation Center",
       dateRange: "2015 - 2017",
       bullets: [
-        "Implementación de unidades de fabricación digital en empresas de manufactura",
-        "Obtención de autorizaciones nacionales como Centro de Innovación Tecnológica y generación de patentes",
+        "Implemented digital fabrication units in manufacturing and securities companies",
+        "Obtained national authorization as a Technology Innovation Center and generated patents",
       ],
     },
     {
-      company: "Neoandina / Minera Barrick",
-      title: "Jefa de Formulación de Proyectos",
+      company: "Neoandina / Barrick Gold",
+      title: "Head of National Project Formulation",
       dateRange: "2009 - 2013",
       bullets: [
-        "Liderazgo de proyectos de responsabilidad social en zonas de influencia minera en Huaraz y La Libertad",
-        "Gestión de presupuestos acumulados superiores a S/ 80 millones",
+        "Led social responsibility projects in mining-influenced areas in Huaraz and La Libertad",
+        "Managed cumulative budgets exceeding S/ 80 million (~$22M USD)",
       ],
     },
   ],
@@ -150,38 +150,38 @@ export const siteConfig = {
   education: [
     {
       school: "LaSalle Universitat Ramon Llull, Barcelona",
-      degree: "Programa Doctoral en Tecnologías de la Información",
-      dateRange: "2021 - Presente",
+      degree: "PhD Program in Information Technologies",
+      dateRange: "2021 - Present",
       achievements: [
-        "Candidata a PhD — TI aplicada a Gestión, Arquitectura y Geofísica",
+        "PhD Candidate — IT applied to Management, Architecture & Geophysics",
       ],
     },
     {
       school: "FabFoundation",
-      degree: "FabAcademy Diploma — Fabricación Digital",
+      degree: "FabAcademy Diploma — Digital Fabrication",
       dateRange: "2024",
       achievements: [
-        "19 semanas de proyectos hands-on",
-        "Proyecto final: Motorized Hidden Pop-Up Shelf",
+        "19 weeks of hands-on projects",
+        "Final project: Motorized Hidden Pop-Up Shelf",
       ],
     },
     {
       school: "Universidad ESAN",
-      degree: "Maestría en Investigación en Ciencias de la Administración",
+      degree: "Master's in Administrative Science Research",
       dateRange: "2017 - 2020",
       achievements: [],
     },
     {
       school: "The University of Sydney",
-      degree: "Maestría en Dirección de Proyectos",
+      degree: "Master of Project Management",
       dateRange: "2013 - 2014",
       achievements: [
-        "Beca del Gobierno Australiano — Latin America Development Scholarship",
+        "Australian Government Scholarship — Latin America Development Scholarship",
       ],
     },
     {
       school: "Universidad Nacional de Ingeniería",
-      degree: "Ingeniera Sanitaria",
+      degree: "Sanitary Engineer",
       dateRange: "1995 - 2000",
       achievements: [],
     },
