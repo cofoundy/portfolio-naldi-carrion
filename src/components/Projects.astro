@@ -1,68 +1,70 @@
 ---
 import { siteConfig } from "../config";
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
+const colors = [siteConfig.accentColor, siteConfig.highlightColor, siteConfig.neonPink, siteConfig.neonBlue];
 ---
 
 {hasProjects && (
-  <>
-    <div class="w-full h-1 accent-bar-shimmer" style={`background: linear-gradient(90deg, ${siteConfig.accentColor} 0%, ${siteConfig.highlightColor} 50%, ${siteConfig.accentColor} 100%)`}></div>
-
-    <section id="projects" class="py-12 md:py-16 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
-        <div class="mb-10 reveal-left">
-          <h2 class="text-3xl md:text-4xl font-bold" style={`color: ${siteConfig.accentColor}`}>Projects</h2>
-          <div class="w-16 h-1 mt-3 rounded-full" style={`background-color: ${siteConfig.highlightColor}`}></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {siteConfig.projects.map((project, index) => {
-            const Component = project.link ? "a" : "div";
-            const linkProps = project.link ? { href: project.link, target: "_blank", rel: "noopener noreferrer" } : {};
-
-            return (
-              <Component
-                {...linkProps}
-                class={`reveal stagger-${index + 1} group card-hover card-shine p-6 rounded-xl bg-white ${project.link ? "cursor-pointer" : ""}`}
-                style={`border: 1px solid ${siteConfig.accentColor}15`}
-              >
-                <!-- Number -->
-                <div
-                  class="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold mb-4 transition-transform duration-300 group-hover:scale-110"
-                  style={`background-color: ${siteConfig.highlightColor}20; color: ${siteConfig.highlightColor}`}
-                >
-                  0{index + 1}
-                </div>
-
-                <h3 class="text-lg font-semibold mb-2" style={`color: ${siteConfig.accentColor}`}>
-                  {project.name}
-                </h3>
-                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
-                  <Fragment set:html={project.description} />
-                </p>
-
-                {project.skills && project.skills.length > 0 && (
-                  <div class="flex flex-wrap gap-1.5">
-                    {project.skills.map((skill) => (
-                      <span class="text-xs px-2 py-1 rounded-full" style={`background-color: ${siteConfig.accentColor}08; color: ${siteConfig.accentColor}`}>
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                {project.link && (
-                  <div class="mt-4 flex items-center gap-1 text-sm font-medium transition-all duration-300 group-hover:gap-2" style={`color: ${siteConfig.highlightColor}`}>
-                    View project
-                    <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                  </div>
-                )}
-              </Component>
-            );
-          })}
-        </div>
+  <section id="projects" class="py-16 md:py-20" style={`background: ${siteConfig.bgPrimary}`}>
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="mb-12 reveal-left">
+        <p class="text-sm font-medium uppercase tracking-widest mb-2" style={`color: ${siteConfig.highlightColor}`}>My work</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Projects</h2>
+        <div class="w-16 h-1 mt-3 rounded-full" style={`background: linear-gradient(90deg, ${siteConfig.accentColor}, ${siteConfig.highlightColor})`}></div>
       </div>
-    </section>
-  </>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {siteConfig.projects.map((project, index) => {
+          const Component = project.link ? "a" : "div";
+          const linkProps = project.link ? { href: project.link, target: "_blank", rel: "noopener noreferrer" } : {};
+          const cardColor = colors[index % colors.length];
+
+          return (
+            <Component
+              {...linkProps}
+              class={`reveal stagger-${index + 1} group card-hover card-shine p-6 rounded-xl border border-white/5 relative overflow-hidden ${project.link ? "cursor-pointer" : ""}`}
+              style={`background: ${siteConfig.bgCard}`}
+            >
+              {/* Top accent line */}
+              <div class="absolute top-0 left-0 right-0 h-[2px]" style={`background: linear-gradient(90deg, transparent, ${cardColor}, transparent)`}></div>
+
+              {/* Number */}
+              <div
+                class="w-12 h-12 rounded-xl flex items-center justify-center text-sm font-bold mb-5 transition-all duration-300 group-hover:scale-110 border"
+                style={`background: ${cardColor}15; color: ${cardColor}; border-color: ${cardColor}30; box-shadow: 0 0 15px ${cardColor}10`}
+              >
+                0{index + 1}
+              </div>
+
+              <h3 class="text-lg font-semibold mb-3 text-white group-hover:transition-colors duration-300" style={`--hover-color: ${cardColor}`}>
+                {project.name}
+              </h3>
+              <p class="text-sm text-gray-400 mb-5 leading-relaxed">
+                <Fragment set:html={project.description} />
+              </p>
+
+              {project.skills && project.skills.length > 0 && (
+                <div class="flex flex-wrap gap-1.5">
+                  {project.skills.map((skill) => (
+                    <span class="text-xs px-2.5 py-1 rounded-full border" style={`background: ${cardColor}10; color: ${cardColor}; border-color: ${cardColor}20`}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {project.link && (
+                <div class="mt-5 flex items-center gap-1 text-sm font-medium transition-all duration-300 group-hover:gap-2" style={`color: ${cardColor}`}>
+                  View project
+                  <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </div>
+              )}
+            </Component>
+          );
+        })}
+      </div>
+    </div>
+  </section>
 )}

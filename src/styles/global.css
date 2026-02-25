@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════════════
-   PRO-STARTER TEMPLATE
-   Derived from Annie Sandoval Premium design
+   PREMIUM CUSTOM DARK TECH TEMPLATE
+   Naldi Carrión Puelles — Custom Design
    ═══════════════════════════════════════════════════════ */
 
 :root {
@@ -15,17 +15,75 @@
 }
 
 body {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
   overflow-x: hidden;
+  background: #0a0a1a;
+  color: #e2e8f0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 700;
 }
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+/* ═══════════════════════════════════════════════════════
+   NEON TEXT GLOW
+   ═══════════════════════════════════════════════════════ */
+
+.neon-text {
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* ═══════════════════════════════════════════════════════
+   NEON BUTTON
+   ═══════════════════════════════════════════════════════ */
+
+.neon-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.neon-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+  transition: left 0.6s ease;
+}
+
+.neon-btn:hover::before {
+  left: 100%;
+}
+
+.neon-btn:hover {
+  box-shadow: 0 0 35px rgba(6, 182, 212, 0.5), 0 0 60px rgba(168, 85, 247, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════
+   FLOATING ICONS
+   ═══════════════════════════════════════════════════════ */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-12px) rotate(2deg); }
+  75% { transform: translateY(8px) rotate(-2deg); }
+}
+
+.floating-icon {
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.floating-icon:hover {
+  opacity: 1;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -69,6 +127,8 @@ html {
 .stagger-3 { transition-delay: 300ms; }
 .stagger-4 { transition-delay: 400ms; }
 .stagger-5 { transition-delay: 500ms; }
+.stagger-6 { transition-delay: 600ms; }
+.stagger-7 { transition-delay: 700ms; }
 
 /* ═══════════════════════════════════════════════════════
    HERO LOAD ANIMATIONS
@@ -121,16 +181,19 @@ html {
 }
 
 /* ═══════════════════════════════════════════════════════
-   CARD HOVER + SHINE
+   CARD HOVER + SHINE (dark version)
    ═══════════════════════════════════════════════════════ */
 
 .card-hover {
   transition: transform var(--duration-normal) var(--ease-out),
-              box-shadow var(--duration-normal) var(--ease-out);
+              box-shadow var(--duration-normal) var(--ease-out),
+              border-color var(--duration-normal) var(--ease-out);
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px -12px rgba(6, 182, 212, 0.15),
+              0 0 20px rgba(168, 85, 247, 0.08);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .card-shine {
@@ -144,8 +207,9 @@ html {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(6, 182, 212, 0.08) 50%, transparent 100%);
   transition: left 0.5s ease;
+  z-index: 1;
 }
 .card-shine:hover::before { left: 100%; }
 
@@ -156,18 +220,28 @@ html {
 .skill-hover {
   transition: transform var(--duration-fast) var(--ease-bounce),
               background-color var(--duration-fast) var(--ease-out),
-              border-color var(--duration-fast) var(--ease-out);
+              border-color var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
 }
-.skill-hover:hover { transform: scale(1.05); }
+.skill-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.2);
+}
 
 /* ═══════════════════════════════════════════════════════
    ICON HOVER (social circles)
    ═══════════════════════════════════════════════════════ */
 
 .icon-hover {
-  transition: transform var(--duration-fast) var(--ease-bounce);
+  transition: transform var(--duration-fast) var(--ease-bounce),
+              border-color var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
 }
-.icon-hover:hover { transform: scale(1.15) rotate(5deg); }
+.icon-hover:hover {
+  transform: scale(1.15) rotate(5deg);
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+}
 
 /* ═══════════════════════════════════════════════════════
    FLOATING HEADER
@@ -191,6 +265,7 @@ html {
   left: 0;
   width: 0;
   height: 2px;
+  background: linear-gradient(90deg, #06b6d4, #a855f7);
   transition: width var(--duration-normal) var(--ease-out);
 }
 .link-underline:hover::after { width: 100%; }

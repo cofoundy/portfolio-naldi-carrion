@@ -4,9 +4,18 @@ export const siteConfig = {
   description:
     "Civil & Sanitary Engineer with 20+ years leading technology innovation, digital fabrication, and social impact projects. PhD candidate, international lecturer, and co-author of 4 patents.",
 
-  // 2-color system: deep teal (brand) + vibrant green (CTAs)
-  accentColor: "#0e7490",
-  highlightColor: "#22c55e",
+  // Dark tech neon palette: cyan primary + purple accent
+  accentColor: "#06b6d4",
+  highlightColor: "#a855f7",
+  // Additional neon colors for variety
+  neonBlue: "#3b82f6",
+  neonPink: "#ec4899",
+
+  // Dark backgrounds
+  bgPrimary: "#0a0a1a",
+  bgSecondary: "#111127",
+  bgCard: "#1a1a2e",
+  bgCardHover: "#22224a",
 
   // Hero stats
   stats: [
